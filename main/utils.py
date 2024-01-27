@@ -5,14 +5,14 @@ from main.models import USDRate
 
 URL = "https://api.apilayer.com/exchangerates_data/latest"
 PARAMS = {
-  'base': 'RUB'
+  'base': 'USD'
 }
 HEADERS = {
   "apikey": settings.EXCHANGE_RATE_API_KEY
 }
 
 
-def get_exchange_rate(currency='USD'):
+def get_exchange_rate(currency='RUB'):
     """
     Возвращает данные о курсе
     :param currency: валюта
