@@ -13,7 +13,7 @@ class CurrentUSDRate(APIView):
 
     def get(self, request, format=None):
         current_rate = get_exchange_rate()
-        rates = USDRate.objects.all()[:10]
+        rates = USDRate.objects.all()[1:11]
 
         if current_rate is None:
             return Response(
